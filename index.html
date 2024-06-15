@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Linkedin</title>
+    <style>
+      @font-face {
+        font-family: "switzer";
+        src: url("images\Switzer-Black.otf") format("otf");
+      }
+      * {
+        text-decoration: none;
+      }
+      body {
+        margin: 0px;
+        background-color: white;
+      }
+      nav {
+        position: fixed;
+        width: 100%;
+        height: 11vh;
+        background-color: white;
+        border: 1px solid;
+        border-color: transparent;
+        box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.222);
+        z-index: 9999;
+      }
+
+      img.logo {
+        position: absolute;
+        height: 100%;
+        width: 120px;
+        object-fit: contain;
+        margin-left: 200px;
+      }
+      div.navig {
+        position: absolute;
+        right: 200px;
+        height: 11vh;
+        width: 600px;
+        object-fit: contain;
+        border: 1px solid;
+        border-color: transparent;
+        padding-left: 30px;
+      }
+      img.arc {
+        position: absolute;
+        object-fit: contain;
+        top: 0px;
+        height: 11vh;
+        width: 40px;
+        border: 1px solid;
+        border-color: transparent;
+        right: 570px;
+      }
+      img.people {
+        position: absolute;
+        object-fit: contain;
+        height: 11vh;
+        width: 40px;
+
+        right: 502px;
+        top: 0px;
+
+        border: 1px solid;
+        border-color: transparent;
+        margin-right: 10px;
+      }
+      img.learn {
+        position: absolute;
+        object-fit: contain;
+        height: 11vh;
+        width: 40px;
+        border: 1px solid;
+        border-color: transparent;
+        top: 0px;
+        right: 447px;
+        margin-right: 10px;
+      }
+      img.job {
+        position: absolute;
+        object-fit: contain;
+        height: 11vh;
+        width: 40px;
+        border: 1px solid;
+        border-color: transparent;
+        top: 0px;
+        right: 397px;
+        margin-right: 10px;
+      }
+      img.games {
+        position: absolute;
+        object-fit: contain;
+        height: 11vh;
+        width: 40px;
+        border: 1px solid;
+        border-color: transparent;
+        top: 0px;
+        right: 347px;
+        margin-right: 10px;
+      }
+      img.app {
+        position: absolute;
+        object-fit: contain;
+        height: 11vh;
+        width: 70px;
+        border: 1px solid;
+        top: 0px;
+        right: 243px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-color: transparent;
+        border-left-color: #666666;
+        border-right-color: #666666;
+        margin-right: 10px;
+      }
+
+      img.arc:hover,
+      img.people:hover,
+      img.learn:hover,
+      img.job:hover,
+      img.games:hover,
+      img.app:hover {
+        border-bottom-color: black;
+        border-bottom-width: 4px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      a.join {
+        position: absolute;
+        right: 110px;
+        top: 1px;
+        margin: 10px;
+        text-align: center;
+        text-decoration: none;
+        font-family: "switzer", sans-serif;
+        font-weight: 600;
+        color: rgba(102, 102, 102, 255);
+        padding: 15px;
+        border: 1px solid;
+        border-color: transparent;
+        border-radius: 25px;
+      }
+      a.join:hover {
+        border: 1px solid;
+        border-color: transparent;
+        border-radius: 25px;
+        background-color: rgba(241, 241, 241, 255);
+      }
+      a.sign {
+        text-align: center;
+        position: absolute;
+        right: 10px;
+        top: 1px;
+        font-weight: 600;
+        margin: 10px;
+        text-decoration: none;
+        font-family: "switzer", sans-serif;
+        color: rgba(3, 102, 195, 255);
+        padding: 15px;
+        border: 1px solid;
+        border-color: rgba(3, 102, 195, 255);
+        border-radius: 25px;
+        background-color: white;
+      }
+      a.sign:hover {
+        border: 1px solid;
+        border-color: rgba(3, 102, 195, 255);
+        border-radius: 25px;
+        color: darkblue;
+        background-color: rgb(232, 244, 251);
+      }
+      div.container {
+        position: absolute;
+        top: 70px;
+        width: 50%;
+        height: 70vh;
+        margin-left: 200px;
+        margin-top: 30px;
+        border: 1px solid;
+        border-color: rgb(223, 223, 223);
+        border-radius: 10px;
+      }
+      div.side {
+        position: absolute;
+        top: 70px;
+        width: 22%;
+        height: 1700px;
+        right: 200px;
+        margin-top: 10px;
+        border: 1px solid;
+        border-color: transparent;
+        border-radius: 10px;
+        text-align: justify;
+        font-family: "switzer", sans-serif;
+        padding: 10px;
+        padding-top: 0px;
+        font-weight: 400;
+      }
+      img.blue {
+        float: left;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+      }
+      .user {
+        position: absolute;
+        left: 12px;
+        top: 55px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.222);
+        margin: 1rem;
+        overflow: hidden;
+      }
+
+      .user img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .container p,
+      .container a {
+        position: relative;
+      }
+      p.name {
+        top: 90px;
+        left: 25px;
+        font-size: 30px;
+        font-weight: 200;
+        font-family: "switzer", sans-serif;
+        font-weight: 500;
+      }
+      p.intro {
+        top: 70px;
+        left: 25px;
+        font-size: 18px;
+        font-family: "switzer", sans-serif;
+        border: 1px solid transparent;
+        height: 100px;
+        width: 400px;
+        text-align: justify;
+      }
+      p.follow {
+        top: 60px;
+        left: 25px;
+        font-size: 17px;
+        font-family: "switzer", sans-serif;
+        font-weight: 400;
+        border: 1px solid transparent;
+        height: 100px;
+        width: 250px;
+        text-align: justify;
+        color: gray;
+      }
+      a.pjoin {
+        top: 20px;
+        left: 15px;
+        margin: 5px;
+        background-color: #0a66c2;
+        text-align: center;
+        text-decoration: none;
+        font-family: "switzer", sans-serif;
+        color: white;
+        padding: 15px;
+        border: 1px solid;
+        border-color: transparent;
+        border-radius: 25px;
+      }
+      a.pjoin:hover {
+        background-color: #084a8c;
+      }
+
+      a.mess {
+        top: 20px;
+        left: 15px;
+        margin: 5px;
+        background-color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: "switzer", sans-serif;
+        color: #0a66c2;
+        padding: 15px;
+        border: 2px solid;
+        border-color: #0a66c2;
+        border-radius: 25px;
+      }
+      a.mess:hover {
+        color: darkblue;
+        background-color: rgb(232, 244, 251);
+      }
+      img.plane {
+        position: relative;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+      }
+      img.thapar {
+        position: absolute;
+        top: 0px;
+        width: 25px;
+        height: 25px;
+        border-radius: 3px;
+
+        margin: 1rem;
+        overflow: hidden;
+      }
+      .thapar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      a.thaparlogo {
+        position: absolute;
+        top: 215px;
+        left: 450px;
+      }
+      a.thapar {
+        position: absolute;
+        top: 225px;
+        left: 497px;
+        border: 1px solid transparent;
+        text-align: left;
+        font-family: "switzer", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: #0a66c2;
+      }
+      a.thapar:hover {
+        text-decoration: underline;
+        color: darkblue;
+      }
+      img.food {
+        position: absolute;
+        top: 80px;
+        left: 10px;
+        height: 120px;
+        width: 200px;
+        object-fit: cover;
+      }
+      div.activity {
+        position: absolute;
+        top: 595px;
+        width: 50%;
+        height: 30vh;
+        padding-bottom: 25px;
+        margin-left: 200px;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-color: rgb(223, 223, 223);
+      }
+      p.act {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+
+        font-family: "switzer", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+      }
+      a.ades {
+        position: absolute;
+        top: 95px;
+        left: 215px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: black;
+
+        font-family: "switzer", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      p.alike {
+        position: absolute;
+        top: 150px;
+        left: 215px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: #666666;
+
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      a.ades:hover {
+        text-decoration: underline;
+      }
+      img.logoexp {
+        position: absolute;
+        top: 85px;
+        left: 10px;
+        height: 45px;
+        width: 45px;
+        object-fit: contain;
+        border: 1px solid;
+        border-color: #666666;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      div.experience {
+        position: absolute;
+        top: 850px;
+        width: 50%;
+        height: 30vh;
+        padding-bottom: 15px;
+        margin-left: 200px;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-color: rgb(223, 223, 223);
+      }
+      p.exp {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+
+        font-family: "switzer", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+      }
+      p.expmem {
+        position: absolute;
+        top: 60px;
+        left: 85px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: black;
+
+        font-family: "switzer", sans-serif;
+        font-size: 20px;
+        font-weight: 550;
+      }
+      a.expdes {
+        position: absolute;
+        top: 110px;
+        left: 85px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: black;
+
+        font-family: "switzer", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      p.expdate {
+        position: absolute;
+        top: 125px;
+        left: 85px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: #666666;
+
+        font-family: "switzer", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      p.exploc {
+        position: absolute;
+        top: 153px;
+        left: 85px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: #666666;
+
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      a.expdes:hover {
+        text-decoration: underline;
+      }
+      img.logoedu {
+        position: absolute;
+        top: 85px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
+        border: 1px solid;
+        border-color: transparent;
+        border-radius: 3px;
+      }
+      div.education {
+        position: absolute;
+        top: 1100px;
+        width: 50%;
+        height: 45vh;
+        padding-bottom: 15px;
+        margin-left: 200px;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-color: rgb(223, 223, 223);
+      }
+      p.edu {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+
+        font-family: "switzer", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        border: 1px solid transparent;
+      }
+      a.eduname {
+        position: absolute;
+        top: 85px;
+        left: 85px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: black;
+
+        font-family: "switzer", sans-serif;
+        font-size: 20px;
+        font-weight: 550;
+        border: 1px solid transparent;
+      }
+      p.edudes {
+        position: absolute;
+        top: 100px;
+        left: 86px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: black;
+
+        font-family: "switzer", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid transparent;
+      }
+      p.edudate {
+        position: absolute;
+        top: 125px;
+        left: 86px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: #666666;
+
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid transparent;
+      }
+      a.eduname:hover {
+        text-decoration: underline;
+      }
+
+      img.logoedu2 {
+        position: absolute;
+        top: 85px;
+        left: 10px;
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
+        border: 1px solid;
+        border-color: #666666;
+        border-radius: 3px;
+      }
+      div.education2 {
+        position: absolute;
+        top: 1220px;
+        width: 50%;
+        margin-left: 200px;
+        margin-top: 30px;
+        height: 30vh;
+        padding-bottom: 15px;
+      }
+      p.edu2 {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+
+        font-family: "switzer", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        border: 1px solid transparent;
+      }
+      a.eduname2 {
+        position: absolute;
+        top: 85px;
+        left: 85px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: black;
+
+        font-family: "switzer", sans-serif;
+        font-size: 20px;
+        font-weight: 550;
+        border: 1px solid transparent;
+      }
+      p.edudes2 {
+        position: absolute;
+        top: 100px;
+        left: 86px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: black;
+
+        font-family: "switzer", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        border: 1px solid transparent;
+      }
+      p.edudate2 {
+        position: absolute;
+        top: 125px;
+        left: 86px;
+        border: 1px solid transparent;
+        width: 540px;
+        color: #666666;
+
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        border: 1px solid transparent;
+      }
+      a.eduname2:hover {
+        text-decoration: underline;
+      }
+      div.container2 {
+        position: absolute;
+        top: 1470px;
+        width: 50%;
+        height: 35vh;
+        margin-left: 200px;
+        margin-top: 30px;
+        border: 1px solid;
+        border-color: rgb(223, 223, 223);
+        border-radius: 10px;
+      }
+      p.line {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        font-size: 25px;
+        top: 3px;
+        left: 20px;
+      }
+      img.see,
+      img.intro,
+      img.contact {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
+      }
+      img.see {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+      }
+      img.intro {
+        position: absolute;
+        top: 120px;
+        left: 20px;
+      }
+      img.contact {
+        position: absolute;
+        top: 160px;
+        left: 20px;
+      }
+      p.l1 {
+        position: absolute;
+        top: 65px;
+        left: 50px;
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+      }
+      p.l2 {
+        position: absolute;
+        top: 105px;
+        left: 50px;
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+      }
+      p.l3 {
+        position: absolute;
+        top: 145px;
+        left: 50px;
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+      }
+      a.pjoin2 {
+        text-align: center;
+        position: absolute;
+        left: 13px;
+        top: 190px;
+        font-weight: 600;
+        margin: 10px;
+        text-decoration: none;
+        font-family: "switzer", sans-serif;
+        color: rgba(3, 102, 195, 255);
+        padding-left: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 15px;
+        border: 1px solid;
+        border-color: rgba(3, 102, 195, 255);
+        border-radius: 25px;
+        background-color: white;
+      }
+      a.pjoin2:hover {
+        border: 1px solid;
+        border-color: rgba(3, 102, 195, 255);
+        border-radius: 25px;
+        color: darkblue;
+        background-color: rgb(232, 244, 251);
+      }
+      p.sidehead {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        top: -5px;
+      }
+      .sideava {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 0px solid white;
+        margin: 1rem;
+        overflow: hidden;
+      }
+
+      .sideava img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      a.username1 {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        top: 75px;
+        left: 80px;
+        color: black;
+      }
+      p.userintro {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        top: 85px;
+        left: 80px;
+        width: 270px;
+        color: black;
+        border: 1px solid transparent;
+        text-align: justify;
+      }
+      p.userloc {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        top: 135px;
+        left: 80px;
+        width: 270px;
+        color: #666666;
+        border: 1px solid transparent;
+        text-align: left;
+      }
+      img.cnct {
+        position: absolute;
+        left: 5px;
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      a.usercnct {
+        text-align: center;
+        position: absolute;
+        left: 65px;
+        top: 165px;
+        width: 90px;
+        font-weight: 500;
+        margin: 10px;
+        text-decoration: none;
+        font-family: "switzer", sans-serif;
+        color: #666666;
+        padding-left: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 15px;
+        border: 1px solid;
+        border-color: black;
+        border-radius: 25px;
+        background-color: #f5f5f5;
+      }
+      a.usercnct:hover {
+        border: 1px solid;
+
+        border-radius: 25px;
+        color: black;
+        background-color: #d3d3d3;
+      }
+      .sideava1 {
+        position: absolute;
+        top: 220px;
+        left: 0px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 0px solid white;
+        margin: 1rem;
+        overflow: hidden;
+      }
+
+      .sideava1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      a.username2 {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        top: 235px;
+        left: 80px;
+        color: black;
+      }
+      p.userintro1 {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        top: 245px;
+        left: 80px;
+        width: 270px;
+        color: black;
+        border: 1px solid transparent;
+        text-align: justify;
+      }
+      p.userloc1 {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        top: 295px;
+        left: 80px;
+        width: 270px;
+        color: #666666;
+        border: 1px solid transparent;
+        text-align: left;
+      }
+      img.cnct {
+        position: absolute;
+        left: 5px;
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      img.cnct1 {
+        position: absolute;
+        left: 5px;
+        height: 20px;
+        width: 20px;
+        object-fit: contain;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      a.usercnct1 {
+        text-align: center;
+        position: absolute;
+        left: 65px;
+        top: 325px;
+        width: 90px;
+        font-weight: 500;
+        margin: 10px;
+        text-decoration: none;
+        font-family: "switzer", sans-serif;
+        color: #666666;
+        padding-left: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 15px;
+        border: 1px solid;
+        border-color: black;
+        border-radius: 25px;
+        background-color: #f5f5f5;
+      }
+      a.usercnct1:hover {
+        border: 1px solid;
+
+        border-radius: 25px;
+        color: black;
+        background-color: #d3d3d3;
+      }
+      a.username1:hover,
+      a.username2:hover {
+        text-decoration: underline;
+      }
+      div.sidecontainer {
+        position: absolute;
+        top: 380px;
+        width: 350px;
+        height: 32vh;
+
+        margin-top: 30px;
+        border: 1px solid;
+        border-color: rgb(223, 223, 223);
+        border-radius: 10px;
+      }
+      a.more {
+        text-align: center;
+        position: absolute;
+        right: 0px;
+        top: 140px;
+        font-weight: 600;
+        margin: 10px;
+        text-decoration: none;
+        font-family: "switzer", sans-serif;
+        color: rgba(3, 102, 195, 255);
+        padding: 15px;
+        border: 1px solid;
+        border-color: rgba(3, 102, 195, 255);
+        border-radius: 25px;
+        background-color: white;
+        width: 300px;
+      }
+      a.more:hover {
+        border: 1px solid;
+        border-color: rgba(3, 102, 195, 255);
+        border-radius: 25px;
+        color: darkblue;
+        background-color: rgb(232, 244, 251);
+      }
+      img.news {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+        top: 5px;
+        left: 10px;
+      }
+      p.headline {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        text-align: left;
+        font-size: 22px;
+        font-weight: 500;
+        top: -15px;
+        left: 80px;
+      }
+      p.hl1 {
+        position: absolute;
+        font-family: "switzer", sans-serif;
+        text-align: justify;
+        width: 310px;
+        font-size: 14px;
+        font-weight: 400;
+        top: 50px;
+        left: 10px;
+        padding: 10px;
+      }
+      footer {
+        position: absolute;
+        top: 1900px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid transparent;
+        padding-bottom: 10px;
+      }
+      img.black {
+        position: absolute;
+        height: 15px;
+        width: 200px;
+        object-fit: contain;
+        margin-top: 7px;
+        margin-left: 120px;
+      }
+      p.cr {
+        position: absolute;
+        left: 250px;
+        top: -6px;
+        border: 1px solid transparent;
+        font-family: "switzer", sans-serif;
+        font-size: 12px;
+      }
+      a.f1,
+      a.f2,
+      a.f3,
+      a.f4,
+      a.f5,
+      a.f6,
+      a.f7,
+      a.f8,
+      a.f9,
+      a.f10 {
+        position: absolute;
+        top: 6px;
+        font-family: "switzer", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: #666666;
+      }
+      a.f1 {
+        position: absolute;
+        left: 320px;
+      }
+      a.f2 {
+        position: absolute;
+        left: 380px;
+      }
+      a.f3 {
+        position: absolute;
+        left: 470px;
+      }
+      a.f4 {
+        position: absolute;
+        left: 585px;
+      }
+      a.f5 {
+        position: absolute;
+        left: 685px;
+      }
+      a.f6 {
+        position: absolute;
+        left: 785px;
+      }
+      a.f7 {
+        position: absolute;
+        left: 895px;
+      }
+      a.f8 {
+        position: absolute;
+        left: 990px;
+      }
+      a.f9 {
+        position: absolute;
+        left: 1090px;
+      }
+      a.f10 {
+        position: absolute;
+        left: 1230px;
+      }
+      a.f1:hover,
+      a.f2:hover,
+      a.f3:hover,
+      a.f4:hover,
+      a.f5:hover,
+      a.f6:hover,
+      a.f7:hover,
+      a.f8:hover,
+      a.f9:hover,
+      a.f10:hover {
+        text-decoration: underline;
+        color: #0a66c2;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#"><img class="logo" src="images\logo.png" /></a>
+      <div class="navig">
+        <a href="#"><img class="arc" src="images\article.jpg" /></a>
+        <a href="#"><img class="people" src="images\people.jpg" /></a>
+
+        <a href="#"><img class="learn" src="images\learning.jpg" /></a>
+        <a href="#"><img class="job" src="images\jobs.jpg" /></a>
+        <a href="#"><img class="games" src="images\games.jpg" /></a>
+        <a href="#"
+          >&nbsp; &nbsp;<img class="app" src="images\app.jpg" />&nbsp;&nbsp;</a
+        >
+        <a class="join" href="#">&nbsp;Join Now &nbsp;</a>
+        <a class="sign" href="#">&nbsp;Sign in&nbsp;</a>
+      </div>
+    </nav>
+    <div class="container">
+      <img class="blue" src="images\5q92mjc5c51bjlwaj3rs9aa82.svg" />
+      <img class="user" src="images\avatar.png" />
+      <p class="name">Naman Kumar</p>
+      <p class="intro">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, quis?
+        Quisquam explicabo aut iure quis aliquid veniam itaque voluptatem
+        pariatur!
+      </p>
+      <a href="#" class="thaparlogo"
+        ><img class="thapar" src="images\thapar.png"
+      /></a>
+      <a href="#" class="thapar"
+        >Thapar Institute of Engineering & Technology</a
+      >
+
+      <p class="follow">
+        Jamshedpur, Jharkhand <br />
+        300 followers . 100 connections
+      </p>
+      <a class="pjoin" href="#">&nbsp;Join to view profile &nbsp;</a>
+      <a class="mess" href="#"
+        ><img
+          class="plane"
+          src="images\plane.png"
+        />&nbsp;&nbsp;Message&nbsp;&nbsp;</a
+      >
+    </div>
+    <div class="activity">
+      <p class="act">Activity</p>
+      <a href="#"><img class="food" src="images\food.jpg" /></a>
+      <a class="ades" href="#">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+        iusto nobis iste magnam sit adipisci odio fugiat commodi! Nemo, atque?
+      </a>
+      <p class="alike">Liked by Naman Kumar</p>
+    </div>
+    <div class="experience">
+      <p class="exp">Experience</p>
+      <a href="#"><img class="logoexp" src="images\gdsc.png" /></a>
+      <p class="expmem">Member</p>
+      <a class="expdes" href="#"> Google Developer Student Club, TIET </a>
+      <p class="expdate">Sep 2023 - Present . 10 months</p>
+      <p class="exploc">Patiala, Punjab, India</p>
+    </div>
+    <div class="education">
+      <p class="edu">Education</p>
+      <a href="#"><img class="logoedu" src="images\thapar.png" /></a>
+      <a href="#" class="eduname"
+        >Thapar Institute of Engineering & Technology</a
+      >
+      <p class="edudes">
+        Bachelor of Technology - BTech . Computer Science Engineering
+      </p>
+      <p class="edudate">2023 - 2027</p>
+    </div>
+
+    <div class="education2">
+      <a href="#"><img class="logoedu2" src="images\dbms.webp" /></a>
+      <a href="#" class="eduname2">D.B.M.S. English School</a>
+      <p class="edudes2">ICSE Class 10: 98% | ISC Class 12: 97.25%</p>
+      <p class="edudate2">2009 - 2023</p>
+    </div>
+    <div class="container2">
+      <p class="line">View Naman's full profile</p>
+
+      <img class="see" src="images\see.jpg" />
+      <p class="l1">See who you know in common</p>
+
+      <img class="intro" src="images\intro.jpg" />
+      <p class="l2">Get introduced</p>
+
+      <img class="contact" src="images\contact.jpg" />
+      <p class="l3">Contact Naman directly</p>
+      <a href="#" class="pjoin2" href="#">&nbsp;Join to view profile &nbsp;</a>
+    </div>
+    <div class="side">
+      <p class="sidehead">People also viewed</p>
+      <div class="sideuser">
+        <img class="sideava" src="images\avatar.png" />
+        <a href="#" class="username1">User Name 1</a>
+        <p class="userintro">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          neque.
+        </p>
+        <p class="userloc">Location</p>
+        <a class="usercnct" href="#"
+          ><img
+            class="cnct"
+            src="images\cnct.jpg"
+          />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connect&nbsp;&nbsp;</a
+        >
+      </div>
+      <div class="sideuser1">
+        <img class="sideava1" src="images\avatar.png" />
+        <a href="#" class="username2">User Name 2</a>
+        <p class="userintro1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          neque.
+        </p>
+        <p class="userloc1">Location</p>
+        <a class="usercnct1" href="#"
+          ><img
+            class="cnct1"
+            src="images\cnct.jpg"
+          />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connect&nbsp;&nbsp;</a
+        >
+      </div>
+      <div class="sidecontainer">
+        <img class="news" src="images\expmore.jpg" />
+        <p class="headline">Explore collaborative articles</p>
+
+        <p class="hl1">
+          We're unlocking community knowledge in a new way. Experts add insights
+          directly into each article, started with the help of AI.
+        </p>
+
+        <a class="more" href="#">&nbsp;Explore More&nbsp;</a>
+      </div>
+    </div>
+    <footer>
+      <img class="black" src="images\logoblack.jpg" />
+      <p class="cr">&nbsp;&copy;&nbsp;2024</p>
+      <a class="f1" href="#">About</a>
+      <a class="f2" href="#">Accessibility</a>
+      <a class="f3" href="#">User Agreement</a>
+      <a class="f4" href="#">Privacy Policy</a>
+      <a class="f5" href="#">Cookie Policy</a>
+      <a class="f6" href="#">Copyright Policy</a>
+      <a class="f7" href="#">Brand Policy</a>
+      <a class="f8" href="#">Guest Controls</a>
+      <a class="f9" href="#">Community Guidelines</a>
+      <a class="f10" href="#">Languages</a>
+    </footer>
+  </body>
+</html>
