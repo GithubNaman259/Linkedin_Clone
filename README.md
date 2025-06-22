@@ -15,7 +15,7 @@ A **static clone** of the **LinkedIn user profile page** built using pure HTML a
 
 ## 📸 Preview
 
-![Screenshot Preview](images/preview.jpg) <!-- Optional: replace with actual screenshot -->
+![Screenshot Preview](images/demo.png)
 
 ---
 
