@@ -8,7 +8,7 @@ A **static clone** of the **LinkedIn user profile page** built using pure HTML a
 
 - 🌐 **Tech Stack**: HTML5 & CSS3 (No JavaScript, no frameworks)
 - 🎯 **Purpose**: To practice layout cloning, positioning, and clean code structure.
-- 📐 **Design Note**: This project is **non-responsive** and optimized for desktop view only.
+- 📐 **Design Note**: This project is **non-responsive** and optimized for **desktop view only**.
 - ✨ **Best viewed at screen resolution: `1519 x 730`**
 
 ---
