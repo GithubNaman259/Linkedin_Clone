@@ -2,7 +2,8 @@
 
 A **static clone** of the **LinkedIn user profile page** built using pure HTML and CSS. This beginner-friendly project focuses on foundational web development practices like layout creation, styling with traditional CSS, and semantic HTML structuring.
 
-🔗 **Live Webpage:** [Webpage URL](https://yourusername.github.io/linkedin-webpage-clone/)
+🔗 **Live Webpage:** [Click Here](https://githubnaman259.github.io/Linkedin_Clone/)
+
 ---
 
 ## 🔍 Overview
